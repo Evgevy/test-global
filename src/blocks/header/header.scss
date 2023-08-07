@@ -43,6 +43,21 @@
         color: #4A4A4A;
     }
 
+    &__link:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: #FB9B69;
+        transition: 0.4s;
+        margin: 0 auto;
+    }
+
+    &__link:hover:after,
+    &__link:focus:after{
+        width: 21px;
+    }
+
     &__btn {
         border-radius: 20px;
         background: #48B774;
@@ -53,6 +68,11 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        transition: .3s;
+    }
+
+    &__btn:hover {
+        background: #3da366;
     }
 
     @media screen and (max-width: 1024px) {
@@ -66,9 +86,6 @@
             width: 40px;
             height: 40px;
             @include flex-dir;
-            //position: absolute;
-            //right: 20px;
-            //top: 25px;
             padding-right: 10px;
             
         }
@@ -84,10 +101,10 @@
 
         &__line {
             &--first {
-            transform: translate(8px, -1px) rotate(45deg);
-            transform-origin: left top;
-            height: 4px;
-            background-color: #FFFFFF;
+                transform: translate(8px, -1px) rotate(45deg);
+                transform-origin: left top;
+                height: 4px;
+                background-color: #FFFFFF;
             }
         }
 
@@ -140,6 +157,37 @@
             order: -1;
         }
 
+    }
+
+    @media screen and (max-width: 500px) {
+        &__logo-text {
+           font-size: px-to-em(20);
+        }
+
+        &__logo {
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__link {
+           font-size: px-to-em(14);
+            
+        }
+
+        &__btn {
+            border-radius: 20px;
+            background: #48B774;
+            padding: 7px 20px;
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            transition: .3s;
+        }
     }
   
 }

@@ -8,7 +8,7 @@ mixin global(modifier)
           p.global__text We Make international calling simple, relible, and cheap basedon your unique calling behavior.
           button(type="button").global__btn Get Started
           form.global__form
-            input(type="search" placeholder="Where do you want to call?").global__input
+            input(type="search" placeholder="Where do you want to call?" pattern=".{4,}" maxlength="12").global__input
             button(type="submit").global__search 
           .global__users 
             .global__icons 
