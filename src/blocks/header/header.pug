@@ -1,0 +1,22 @@
+mixin header(modifier)
+  header.header&attributes(attributes)
+    .header__content
+      .header__inner 
+        a(href="#!").header__logo 
+          include img/logo.svg
+          p.header__logo-text Global
+        nav.header__nav 
+          ul.header__list 
+            li.header__item 
+              a(href="#!").header__link Mobile Top Up 
+            li.header__item 
+              a(href="#!").header__link About    
+            li.header__item 
+              a(href="#!").header__link Rate   
+            li.header__item 
+              a(href="#!").header__link Help
+        .header__burger 
+          .header__line 
+          .header__line
+          .header__line
+        button(type="button").header__btn Sign Up
