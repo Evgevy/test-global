@@ -208,7 +208,6 @@
 
     &__img {
         position: absolute;
-        opacity: 0;
         z-index: -1;
         &--five {
             top: 50%;
@@ -217,6 +216,7 @@
             height: 70px;
             animation: magic 1s linear forwards, around 5s linear infinite;
             animation-delay: 4.6s, 6.4s;
+            opacity: 0;
         }
 
         &--one {
@@ -244,7 +244,6 @@
             right: 310px;
             width: 70px;
             height: 70px;
-            z-index: -1;
             animation: magic-three 1s linear forwards, around-three 5s linear infinite;
             animation-delay: 3s, 6.4s;
             opacity: 0;
